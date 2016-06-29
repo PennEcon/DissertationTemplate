@@ -1,0 +1,182 @@
+% Here is a sample format for dissertation in math.  You need to check
+% University of Pennsylvania Doctoral Dissertation Manual to adjust
+% any changes they made at the webpage:
+
+% http://www.upenn.edu/grad/DissManual.html.  
+
+% This style file was used in connection with printing from printer 3one.
+% (Different printers could give you different margins.)
+
+% This sample can also be used for masters thesis, but you need to make
+% some slight changes.
+    
+\documentclass[12pt]{report}
+\usepackage{float}
+\usepackage{latexsym}
+\usepackage{natbib}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage[nottoc]{tocbibind}
+\usepackage{color}
+\usepackage[toc,page]{appendix}
+\usepackage{IEEEtrantools}
+\usepackage{lscape}
+\usepackage{booktabs,threeparttable}
+\usepackage{titlesec}
+\usepackage{subfig}
+\usepackage{chngcntr}
+\counterwithout{footnote}{chapter}
+\titleformat{\section}
+  {\normalfont\fontsize{12}{15}\bfseries}{\thesection}{1em}{}
+
+\titleformat{\subsection}
+  {\normalfont\fontsize{12}{15}\bfseries}{\thesubsection}{1em}{}
+
+\titleformat{\chapter}
+  {\normalfont\fontsize{18}{15}\bfseries}{\thechapter}{1em}{}
+
+
+
+\numberwithin{equation}{section}
+%%%%%%%%%%%%%%%%%
+%%%%%% Margins
+%%%%%%%%%%%%%%%%%
+%\setlength{\topmargin}{1in}
+\setlength{\headheight}{0in}
+\setlength{\textheight}{8.5in}
+\setlength{\oddsidemargin}{0.55in}
+%\setlength{\evensidemargin}{-0.25in}
+\setlength{\textwidth}{5.87in}
+\setlength{\headsep}{-.19in}
+
+\pagestyle{plain}
+
+%%%%%%%%%%%%%%%%%
+%%%%%% Spacing
+%%%%%%%%%%%%%%%%%
+\newcommand{\doublespaced}{\renewcommand{\baselinestretch}{2}\normalfont}
+\newcommand{\singlespaced}{\renewcommand{\baselinestretch}{1}\normalfont}
+%\newcommand{\draftspaced}{\singlespaced} %for draft only 
+\newcommand{\draftspaced}{\doublespaced} %for final version
+
+
+
+%%%%%%%%%%%%%%%%%
+%%%%%% Shortcuts
+%%%%%%%%%%%%%%%%%
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Prob}{\mathbb{P}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\newcommand{\tab}{\hspace{5pt}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{proposition}{Proposition}
+\newtheorem{assumption}{Assumption}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+%%%%%%%%%%%%%%%%%
+%%%%%% Definigtions
+%%%%%%%%%%%%%%%%%
+\def\thetitle{TITLE}
+\def\theauthor{Name}   
+\def\theadvisor{Advisor}
+\def\THEAUTHOR  {Name }
+\def\THEADVISOR {Advisor} 
+\def\theyear{2016}
+
+
+\begin{document}
+\pagenumbering{roman}
+\large\newlength{\oldparskip}\setlength\oldparskip{\parskip}\parskip=.3in
+\thispagestyle{empty}
+\begin{center}
+\thetitle
+
+\input{title.tex}
+
+
+\newpage
+
+
+% Copyright
+\doublespaced
+
+\input{copyright.tex}
+
+\newpage
+
+% Dedication
+
+\begin{center}
+\emph{Dedication goes here}
+\end{center}
+
+\newpage
+% Acknowledgment
+\chapter*{Acknowledgments}
+\input{acknolowd.tex}
+
+\newpage
+\input{abstract.tex}
+
+\vspace*{\fill}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+\listoftables
+
+\newpage
+\listoffigures
+
+\newpage
+\draftspaced
+\pagenumbering{arabic}
+\include{introdept}
+\include{back}
+\include{finitedept}
+\include{infinitedept}
+
+\chapter*{Introduction}
+\addcontentsline{toc}{chapter}{Introduction}
+\input{introduction.tex}
+
+\chapter{Chaper 1 Title}
+
+\input{chapter1.tex}
+
+\chapter{Chapter 2 Title}
+
+\input{chapter2.tex}
+
+% \bibliographystyle{plainnat}
+% \bibliography{BibFile.bib}
+
+\newpage
+
+\input{appendix.tex}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
