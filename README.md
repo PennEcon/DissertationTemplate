@@ -1,6 +1,6 @@
 # Penn dissertation template
 
-This is a template for a Penn Economics/Finance/AppliedEcon style dissertation.
+This is a template for a Penn Economics/Finance/AppliedEcon style dissertation. See the example document with placeholder text [here](https://pennecon.github.io/DissertationTemplate/dissertation.pdf).
 
 The main file is `dissertation.tex`. Add custom packages and formatting to the preamble. 
 
