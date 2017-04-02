@@ -1,6 +1,7 @@
-# DissertationTemplate
-This is a template for a Penn Economics/Finance/AppliedEcon dissertation.
+# Penn dissertation template
 
-The main file is dissertation.tex, and each paper should go in one of the chapterX.tex files.
+This is a template for a Penn Economics/Finance/AppliedEcon style dissertation.
+
+The main file is dissertation.tex. Include your paper (excluding the preamble, of course), where `chapterX.tex` is currently.
 
 Check the [university's style guidelines](http://guides.library.upenn.edu/dissertation_manual/formatting) to adjust for changes.
