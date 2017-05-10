@@ -8,4 +8,6 @@ Front matter (the abstract, copyright notice, dedication, and acknowledgements),
 
 Include your paper contents (excluding the preamble, of course), where `chapterX.tex` is currently, replacing `\input{content/chapter1.tex}` with your own work.
 
+If you're interested in more thorough automation and/or writing your dissertation with `knitr`, see @MichaelChirico's fork [here](https://github.com/MichaelChirico/DissertationTemplate).
+
 Check the [university's style guidelines](http://guides.library.upenn.edu/dissertation_manual/formatting) to adjust for changes.
