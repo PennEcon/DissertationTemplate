@@ -10,8 +10,6 @@
 %%%%%% Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage{float}
-\usepackage{natbib}
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{amsthm}
@@ -20,6 +18,16 @@
 \usepackage{booktabs}
 \usepackage{titlesec}
 \usepackage{chngcntr}
+\usepackage{graphicx}
+
+% using biblatex and biber instead of natbib
+\usepackage[backend=biber,
+            style=authoryear,
+            doi=false,url=false,isbn=false,
+            maxcitenames=2]{biblatex}
+\addbibresource{references.bib}
+\AtEveryBibitem{\clearlist{language}} % clears language from bib entries
+\usepackage{csquotes}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%% Document setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -121,7 +129,6 @@
 \newpage
 
 % bibliography
-\bibliographystyle{plainnat}
-\bibliography{BibFile.bib}
+\printbibliography[heading=bibintoc, title={Bibliography}]
 
 \end{document}
